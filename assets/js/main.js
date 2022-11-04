@@ -28,13 +28,13 @@ function randomNumber(){
 console.log(randomNumber());
 
 function loopxFive(){
-    let x = 0; //variabile contatore
-    let num; //variabile soldato
-    while( x < 5 ){ //svogli il ciclo finche x arriva a 5
-        num = randomNumber(); //svolge la funzione di generare il numero random nella variabile soldato
-        if ( !arrayRandom.includes(num) ) { //se l'arrayRandom non include il num generato con la funzione : (continua sotto)
-            x++; //vai avanti con il cilo (continua sotto)
-            arrayRandom.push(num); // e pusha il num generato nell'arrayRandom
+    let x = 0; 
+    let num; 
+    while( x < 5 ){ 
+        num = randomNumber(); 
+        if ( !arrayRandom.includes(num) ) { 
+            x++; 
+            arrayRandom.push(num); 
         } 
     } 
     return arrayRandom; 
@@ -61,7 +61,8 @@ function whatNumberIs(){
         }
         x++
     }
-    return document.getElementById('numCorretti').innerText = `I numeri corretti da te inseriti sono : ${arrayPrompt}`;
+    document.getElementById('print').classList.remove('none');
+    return document.getElementById('numCorretti').innerText = `Il punteggio è: ${arrayPrompt.length}.  I numeri corretti da te inseriti sono : ${arrayPrompt}`;
 }
 
 
